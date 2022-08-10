@@ -12,6 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(__dirname))
 
+// custome middleware
 app.use((req, res, next) => {
     if (req.url === `/admin`) {
         return next(`unauthorized`)
@@ -19,6 +20,7 @@ app.use((req, res, next) => {
         next()
     }
 })
+// route middlewares
 
 app.get(`/`, (req, res) => {
     res.sendFile(__dirname+`index.html`)
@@ -27,10 +29,14 @@ app.get(`/`, (req, res) => {
 app.get(`/about`, (req, res) => {
     res.sendFile(__dirname+`/about.html`)
 })
-
+// 404 error
+app.use((req, res, next) => {
+    res.send(`page not found`)
+})
+// custome error
 app.use((err, req, res, next) => {
-    console.log(err);
-    res.send(err)
+
+    res.status(500).send(err)
 })
 
 app.listen(4000, () => {
