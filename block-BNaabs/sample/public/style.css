@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: cornflowerblue;
+}
+header{
+
+    text-align: center;
+}
+h1{
+font-size: 2rem;
+font-weight: 800;
+}
+h2{
+    
+
+     color: yellow;
+
+}
+div{
+    display: flex;
+    justify-content: space-between;
+}
+article{
+    width: 23%;
+    text-align: justify;
+    /* border: 1px solid; */
+    padding: .1rem 1rem;
+    color: rgb(29, 3, 46);
+    background-color: rgb(207, 173, 247);
+}

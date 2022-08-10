@@ -1,0 +1,12 @@
+*{
+    box-sizing: border-box;
+}
+
+form{
+    padding: 3rem;
+    background: rgb(108, 108, 180)
+}
+
+input{
+    padding: 1rem;
+}
