@@ -13,14 +13,19 @@ app.use(urlencoded({extended:false}))
 app.use(express.static(__dirname+`/public`))
 app.use(cookieParser())
 
+
 app.use((req,res,next)=>{
-   console.log(req.url);
+    console.log(req.cookies);
+})
+app.use(`/about`,(req,res,next)=>{
+  
     res.cookie(`username`,`suraj`)
+    res.end(`about page`)
     next()
 })
 
 
-app.get(`/about`,(req,res)=>{
+app.get(`/`,(req,res)=>{
     res.send(`welcome to express`)
 })
 
