@@ -16,21 +16,26 @@ app.use(express.static(__dirname +`/public/`))
 
 
 app.use((req, res, next) => {
-    console.log(req.url);
+    // console.log(req.url);
     next()
 })
 app.get(`/`,(req,res)=>{
-    console.log(req.url);
     res.sendFile( __dirname+`/index.html`)
 })
 
 
-app.post(`/new`, (req, res) => {
-    console.log(req.url)
+app.get(`/new`, (req, res) => {
+  
+    res.sendFile( __dirname+`/new.html`)
 })
 
-app.use(`/user:name`, (req, res) => {
-    let username=req.params.name
+app.post(`/new`, (req, res) => {
+    console.log(req.body);
+    res.json(req.body)
+})
+app.get(`/user/:name`, (req, res) => {
+    let username = req.params.name
+    res.send(username)
 })
 app.listen(4000,()=>{
     console.log(`server linstening on port 4k`);
