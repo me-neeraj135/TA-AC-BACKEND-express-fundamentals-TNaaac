@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Stimulus</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/public/styleSheet/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="container">
+       <ul class="brand-logo">
+          <li>
+            <a href="#">stimulus</a>
+          </li>
+          </ul>
+        <label for="toggle" class="bar-icon">
+         <i class="fa-solid fa-bars full-width"></i>
+       </label>
+        <input type="checkbox" id="toggle" class="check-box">
+        
+        
+        <ul class="brand-nav-ul">
+          <li>
+            <a class="home" href="#">home</a>
+          </li>
+          <li><a href="#">about me</a></li>
+          <li>
+            <a href="#">experience</a>
+          </li>
+          <li>
+            <a href="#">testimonial</a>
+          </li>
+          <li>
+            <a href="#">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main -->
+    <main>
+      <div class="container grid-container">
+        <div class="item item1"></div>
+        <div class="item item2">
+          <div>
+            <p>Lorem ipsum dolor</p>
+            <h1>
+              Hello, I am <strong>stimulus</strong> currently based in New York
+              city.
+            </h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Laboriosam quasi, Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Laboriosam quasi, tenetur voluptatum distinctio
+              sequi, placeat
+            </p>
+            <button class="btn btn-primary">
+              <a href="#">get started</a>
+            </button>
+          </div>
+        </div>
+        <div class="item item3">
+          <div>
+            <h2>Donec auctor</h2>
+            <p class="red-highlight">Lorem ipsum, dolor sit.</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+              reprehenderit explicabo, voluptatum aliquam molestiae culpa
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+              reprehenderit explicabo, voluptatum aliquam molestiae culpa
+            </p>
+          </div>
+        </div>
+        <div class="item item4"></div>
+        <div class="item item5">
+          <div>
+            <h2>my skill</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <div class="pro-box">
+              <div class="flex justify-between">
+                <label for="skill">Frontend Design</label> <span>90</span>
+              </div>
+              <progress id="skill" value="90" max="100">32%</progress>
+            </div>
+            <div class="pro-box">
+              <div class="flex justify-between">
+                <label for="skill">Backend process</label> <span>90</span>
+              </div>
+              <progress id="skill" value="90" max="100">32%</progress>
+            </div>
+            <div class="pro-box">
+              <div class="flex justify-between">
+                <label for="skill">HTML & CSS</label> <span>90</span>
+              </div>
+              <progress id="skill" value="90" max="100">32%</progress>
+            </div>
+          </div>
+        </div>
+        <div class="item item6">
+          <div class="flex flex-direction-column align-center">
+            <i class="fa-solid fa-desktop"></i>
+            <h3>interface design</h3>
+            <p>
+              consectetur, adipisicing elit. Lorem ipsum dolor sit amet Illo
+              dicta ad adipisci lorem hello how ?
+            </p>
+          </div>
+        </div>
+        <div class="item item7">
+          <div class="flex flex-direction-column align-center">
+            <i class="fa-solid fa-paper-plane"></i>
+            <h3>media strategy</h3>
+            <p>
+              consectetur, adipisicing elit. Lorem ipsum dolor sit amet Illo
+              dicta ad adipisci lorem hello how ?
+            </p>
+          </div>
+        </div>
+        <div class="item item8">
+          <div class="flex flex-direction-column align-center">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h3>mobile app</h3>
+            <p>
+              consectetur, adipisicing elit. Lorem ipsum dolor sit amet Illo
+              dicta ad adipisci lorem hello how ?
+            </p>
+          </div>
+        </div>
+        <div class="item item9">
+          <div class="flex flex-direction-column align-center">
+            <i class="fa-brands fa-html5"></i>
+            <h3>coding</h3>
+            <p>
+              consectetur, adipisicing elit. Lorem ipsum dolor sit amet Illo
+              dicta ad adipisci lorem hello how ?
+            </p>
+          </div>
+        </div>
+        <div class="item item10"></div>
+        <div class="item item11">
+          <div>
+            <h3>my experiences</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+            <div class="flex justify-start">
+              <span>
+                <i class="fa-solid fa-laptop"></i>
+              </span>
+              <div class="flex flex-direction-column h4-p-box">
+                <h4>
+                  graphic designer
+
+                  <strong class="date-time"> 2014 jul - 2015 sep </strong>
+                </h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="flex justify-start">
+              <span>
+                <i class="fa-solid fa-laptop"></i>
+              </span>
+              <div class="flex flex-direction-column h4-p-box">
+                <h4>
+                  web designer
+
+                  <strong class="date-time"> 2014 jul - 2015 sep </strong>
+                </h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item item12">
+          <div>
+            <h3>my education</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+            <div class="flex justify-start">
+              <span>
+                <i class="fa-solid fa-laptop"></i>
+              </span>
+              <div class="flex flex-direction-column h4-p-box">
+                <h4>
+                  master in degree
+                  <strong class="date-time"> 2014 jul - 2015 sep </strong>
+                </h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="flex justify-start">
+              <span>
+                <i class="fa-solid fa-laptop"></i>
+              </span>
+              <div class="flex flex-direction-column h4-p-box">
+                <h4>
+                  bachelor of arts
+                  <strong class="date-time"> 2014 jul - 2015 sep </strong>
+                </h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item item13"></div>
+        <div class="item item14">
+          <div>
+            <h3>say hello</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+            <form action="/action_page.php">
+              <div>
+                <label for="fname">Your Name</label><br />
+                <input class="input" type="text" id="fname" name="fname" />
+              </div>
+
+              <div>
+                <label for="email">Your Email</label><br />
+                <input class="input" type="text" id="email" name="mail" />
+              </div>
+              <div>
+                <label for="msg">write your Message...</label> <br />
+                <textarea name="msg" id="msg" cols="30" rows=""></textarea>
+              </div>
+              <input class="btn-secondary" type="submit" value="Send" />
+            </form>
+          </div>
+        </div>
+        <div class="item item15"></div>
+        <div class="item item16">
+          <div>
+            <div>
+              <h4>visit my office</h4>
+              <address>456 new street 22000, new york city. <br />usa</address>
+            </div>
+            <ul>
+              <h4>contact</h4>
+            <li>
+                   
+                      <i class="fa-solid fa-phone"></i>
+                    
+                    <a href="tel:123456789" >01-0110-0220</a>
+            </li>
+            <li>
+                
+                    <i class="fa-solid fa-envelope"></i>
+                    <a class="contact-add" href="tel:123456789" >hello@compay.com</a>
+            </li>
+            <li>
+            <i class="fa-solid fa-earth-americas"></i>
+            <a class="contact-add href="tel:123456789" >company.com</a>
+            </li>
+            </div>
+        </ul>
+        </div>
+        <div class="item item17">
+          <div>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211426.55884366875!2d74.66666710432216!3d34.10692328120807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e1855686e3c5ef%3A0x66244b7cc1e305c6!2sSrinagar!5e0!3m2!1sen!2sin!4v1649161461739!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer> 
+        <div class="item item18 container flex align-self-center flex-direction-column ">
+          
+            <small>copyright&copy;2016 your company | design <span>templatemo</span> </small>
+
+          <ul class="flex  justify-center">
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#"> <i class="fa-brands fa-twitter"></i>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+<i class="fa-brands fa-google-plus-g"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+<i class="fa-solid fa-futbol"></i>
+              </a>
+            </li>
+            
+           <li>
+             <a href="#">
+ <i class="fa-brands fa-linkedin-in"></i>
+             </a>
+           </li>
+            
+            
+           
+          </ul>
+
+          
+        </div>
+    </footer>
+    <!-- Script -->
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
