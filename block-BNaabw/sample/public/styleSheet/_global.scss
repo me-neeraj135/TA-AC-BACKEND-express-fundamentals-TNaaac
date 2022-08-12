@@ -1,0 +1,102 @@
+/* Global Styles */
+
+/* General */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1.125rem;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  // padding: 0 1.5rem;
+  // border: 5px solid;
+}
+
+/* Anchor Decoration */
+a {
+  text-decoration: none;
+}
+
+/* Image Adjust */
+.full-width {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Positions */
+.position-absolute {
+  position: absolute;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.position-sticky {
+  position: sticky;
+}
+
+.z-index-100 {
+  z-index: 100;
+}
+
+.z-index-50 {
+  z-index: 50;
+}
+
+.z-index-10 {
+  z-index: 10;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.35rem 1rem;
+  border-radius: 0.9rem;
+
+  box-sizing: border-box;
+}
+
+.btn:hover {
+  cursor: pointer;
+  padding: 0.35rem 1.2rem;
+  border-radius: 0.9rem;
+}
+
+.btn-primary {
+  color: $black-text;
+  border: 2px solid $black-text;
+  a {
+    color: $black-text;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+.btn-secondary {
+  padding: 0.5rem 4rem;
+  border-radius: 0.9rem;
+  color: $black-text;
+  background-color: white;
+  border: none;
+}
