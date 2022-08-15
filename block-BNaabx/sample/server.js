@@ -1,21 +1,50 @@
-let express = require(`express`)
-// let logger = require(`morgan`)
-let cookieParser = require(`cookie-parser`)
-const { application } = require("express")
+/** @format */
 
-let app = express()
+let express = require(`express`);
 
-function logger(req, req, next) {
-    console.log(req.method);
-next()
+const { application } = require("express");
+let date = new Date();
+let app = express();
 
+function logger(req, res, next) {
+  console.log(req.method, req.url, date.toLocaleTimeString());
+  next();
 }
 
-app.use(logger)
+app.use(`/`, logger);
 
-app.get(`/user`, (req, res) => {
-    console.log(req.method);
-})
+app.use((req, res, next) => {
+  let store = ``;
+  req.on(`data`, chunk => {
+    store += chunk;
+  });
+  req.on(`end`, () => {
+    req.body = store;
+    console.log(req.body);
+  });
+  next();
+});
+
+// custom middleware for css and media files
+
+app.get(`/`, (req, res) => {
+  // res.setHeader(`Content-Type`, `text/html`);
+  res.sendFile(__dirname + `/index.html`);
+});
+
+app.use((req, res, next) => {
+  // console.log(req.url);
+
+  if (req.url.split(`.`).pop() === `css`) {
+    res.setHeader(`Content-Type`, `text/css`);
+    res.send(__dirname + req.url);
+  } else if (req.url.split(`.`).pop() === `jpg`) {
+    res.setHeader(`Content-Type`, `image/jpg`);
+    res.send(__dirname + req.url);
+  }
+  next();
+});
+
 app.listen(5000, () => {
-    console.log(`server linstening on port 5k`);
-})
+  console.log(`server listening on port 5k`);
+});
