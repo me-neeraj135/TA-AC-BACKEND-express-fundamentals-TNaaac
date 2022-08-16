@@ -2,9 +2,12 @@
 
 let express = require(`express`);
 
-const { application } = require("express");
+// const { application } = require("express");
 let date = new Date();
 let app = express();
+let publicPath = __dirname + `/public/`;
+let mediaPath = publicPath + `media/`;
+console.log(mediaPath);
 
 function logger(req, res, next) {
   console.log(req.method, req.url, date.toLocaleTimeString());
@@ -27,22 +30,18 @@ app.use((req, res, next) => {
 
 // custom middleware for css and media files
 
-app.get(`/`, (req, res) => {
-  // res.setHeader(`Content-Type`, `text/html`);
-  res.sendFile(__dirname + `/index.html`);
+app.use((req, res, next) => {
+  if (req.url.split(`.`).pop() === `css`) {
+    res.sendFile(publicPath + req.url);
+  } else if (req.url.split(`.`).pop() === `jpg`) {
+    res.sendFile(mediaPath + req.url);
+  } else {
+    next();
+  }
 });
 
-app.use((req, res, next) => {
-  // console.log(req.url);
-
-  if (req.url.split(`.`).pop() === `css`) {
-    res.setHeader(`Content-Type`, `text/css`);
-    res.send(__dirname + req.url);
-  } else if (req.url.split(`.`).pop() === `jpg`) {
-    res.setHeader(`Content-Type`, `image/jpg`);
-    res.send(__dirname + req.url);
-  }
-  next();
+app.get(`/`, (req, res) => {
+  res.sendFile(__dirname + `/index.html`);
 });
 
 app.listen(5000, () => {
